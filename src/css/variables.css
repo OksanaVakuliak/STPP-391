@@ -1,0 +1,61 @@
+:root {
+  --color-bg: #ffedcf;
+  --color-accent: #1e46c0;
+  --color-footer: #052b9f;
+  --color-batten: #304efa;
+  --color-border: #f29707;
+  --color-border-alt: #8f1a86;
+  --color-text: #00050d;
+  --color-white: #ffffff;
+
+  --gradient-button-border: conic-gradient(
+    #ffd07c 32%,
+    #f7a81c 47%,
+    #ffffff 52%,
+    #f29707 82%
+  );
+  --gradient-decor: radial-gradient(#8aaae6 37%, #1e46c0 100%);
+
+  --font-display: 'Fredoka', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --fs-h1: 32px;
+  --fs-h2: 28px;
+  --fs-h3: 22px;
+  --fs-body: 16px;
+  --fs-button: 22px;
+
+  --lh-heading: 1.3;
+  --lh-body: 1.4;
+
+  --ls-h1: 0.03em;
+  --ls-h2: 0.03em;
+  --ls-h3: 0.02em;
+  --ls-body: 0.02em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --radius-card: 32px;
+  --border-card: 4px;
+
+  --shadow-button: 8px 8px 8px 2px rgba(7, 5, 83, 0.25);
+  --shadow-faq: 4px 4px 12px rgba(0, 0, 0, 0.25);
+
+  --container-padding: 16px;
+  --container-max: 375px;
+}
+
+@media only screen and (min-width: 1440px) {
+  :root {
+    --fs-h1: 64px;
+    --fs-h2: 40px;
+    --fs-h3: 28px;
+    --fs-body: 20px;
+
+    --container-padding: 32px;
+    --container-max: 1440px;
+  }
+}
