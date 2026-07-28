@@ -4,3 +4,9 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
+
+@media (min-width: 1440px) {
+  .container {
+    width: var(--container-max);
+  }
+}

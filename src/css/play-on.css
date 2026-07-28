@@ -1,0 +1,72 @@
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.play-on {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 3px 18px;
+  width: 178px;
+  border-radius: 22px;
+  background: var(--color-batten);
+
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 16px;
+  text-align: left;
+  text-wrap: wrap;
+  line-height: 100%;
+  letter-spacing: var(--ls-body);
+  color: var(--color-white);
+  outline: transparent;
+  border: 1px solid transparent;
+  transition: background 0.3s ease;
+}
+
+.play-on::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -6px;
+  width: 188px;
+  height: 48px;
+  background: conic-gradient(
+    from var(--angle),
+    #ffd07c 0deg,
+    #f7a81c 90deg,
+    #ffffff 180deg,
+    #f29707 270deg,
+    #ffd07c 360deg
+  );
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: var(--shadow-button);
+
+  animation: border-rotate 2.8s linear infinite;
+}
+
+@keyframes border-rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media (hover: hover) {
+  .play-on:hover {
+    background: var(--color-accent);
+    cursor: pointer;
+  }
+  .play-on:hover::before {
+    animation-play-state: paused;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .play-on {
+    display: flex;
+  }
+}
