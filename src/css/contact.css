@@ -1,0 +1,117 @@
+.contact {
+  padding-top: 32px;
+  padding-bottom: 82px;
+  background-color: var(--color-bg);
+}
+
+.contact__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 12px;
+  border-radius: var(--radius-card);
+  background-color: var(--color-border);
+  box-shadow: var(--shadow-faq);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.contact__card::before,
+.contact__card::after {
+  content: '';
+  position: absolute;
+  bottom: -68px;
+  height: 86px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.contact__card::before {
+  left: 4px;
+  width: 44px;
+  background-image: url('../img/illustrations/dog.webp');
+}
+
+.contact__card::after {
+  right: 4px;
+  width: 51px;
+  background-image: url('../img/illustrations/dog-sm.webp');
+}
+
+.contact__subtitle {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-h3);
+  -webkit-text-stroke: 4px var(--color-accent);
+  paint-order: stroke fill;
+}
+
+.contact__mail {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  margin-top: 24px;
+  padding: 23px;
+  border: 1px solid var(--color-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-button);
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: 18px;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+@media (hover: hover) {
+  .contact__mail:hover {
+    background-color: var(--color-white);
+    color: var(--color-border);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .contact {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .contact__card {
+    max-width: 996px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  .contact__card::before {
+    left: -102px;
+    bottom: -14px;
+    width: 148px;
+    height: 325px;
+    background-image: url('../img/illustrations/king.webp');
+  }
+
+  .contact__card::after {
+    right: -63px;
+    bottom: -14px;
+    width: 93px;
+    height: 156px;
+  }
+
+  .contact__subtitle {
+    margin-top: 24px;
+    max-width: 770px;
+  }
+
+  .contact__mail {
+    align-self: center;
+    padding: 27px 50px;
+    font-size: var(--fs-button);
+  }
+}
