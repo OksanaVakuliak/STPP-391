@@ -7,6 +7,7 @@
   --color-border-alt: #8f1a86;
   --color-text: #00050d;
   --color-white: #ffffff;
+  --color-glass: rgba(255, 255, 255, 0.3);
 
   --gradient-button-border: conic-gradient(
     #ffd07c 32%,
@@ -46,6 +47,8 @@
 
   --container-padding: 16px;
   --container-max: 375px;
+
+  --transition-default: 0.3s ease-in-out;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -55,7 +58,7 @@
     --fs-h3: 28px;
     --fs-body: 20px;
 
-    --container-padding: 120px;
+    --container-padding: 32px;
     --container-max: 1440px;
   }
 }

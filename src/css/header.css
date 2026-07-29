@@ -2,19 +2,20 @@
   padding-top: 12px;
   padding-bottom: 12px;
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 62px;
   color: var(--color-white);
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-glass);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-default);
 }
 
-.header.hide {
+.header[data-hidden='true'] {
   transform: translateY(-100%);
 }
 
