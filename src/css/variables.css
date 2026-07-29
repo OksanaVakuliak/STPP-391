@@ -8,12 +8,8 @@
   --color-text: #00050d;
   --color-white: #ffffff;
 
-  --gradient-button-border: conic-gradient(
-    #ffd07c 32%,
-    #f7a81c 47%,
-    #ffffff 52%,
-    #f29707 82%
-  );
+  --gradient-button-colors: #ffd07c 32%, #f7a81c 47%, #ffffff 52%, #f29707 82%;
+  --gradient-button-border: conic-gradient(var(--gradient-button-colors));
   --gradient-decor: radial-gradient(#8aaae6 37%, #1e46c0 100%);
 
   --font-display: 'Fredoka', sans-serif;
