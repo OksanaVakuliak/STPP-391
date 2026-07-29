@@ -1,8 +1,13 @@
 .container {
-  min-width: 320px;
-  max-width: var(--container-max);
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--container-padding);
+}
+
+@media (min-width: 375px) {
+  .container {
+    width: var(--container-max);
+  }
 }
 
 @media (min-width: 1440px) {
