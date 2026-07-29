@@ -1,6 +1,7 @@
 .faq {
   padding-top: 32px;
   padding-bottom: 32px;
+  background-color: var(--color-accent);
   background-image: url('../img/bg/faq-mobile.webp');
   background-repeat: no-repeat;
   background-position: center;
