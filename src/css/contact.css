@@ -65,6 +65,7 @@
   font-family: var(--font-display);
   font-weight: var(--fw-medium);
   font-size: 18px;
+  transition: box-shadow 300ms ease;
 }
 
 .contact__mail::before {
@@ -73,7 +74,7 @@
   inset: 0;
   padding: var(--border-card);
   border-radius: inherit;
-  background: var(--gradient-button-border);
+  background: conic-gradient(from var(--angle), var(--gradient-button-colors));
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
