@@ -85,7 +85,7 @@ body[data-menu-open='true'] {
   transform: translateX(0);
 }
 
-@media only screen and (min-width: 1439.7px) {
+@media only screen and (min-width: 1440px) {
   .mobile-menu {
     display: none;
   }

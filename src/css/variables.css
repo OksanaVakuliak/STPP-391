@@ -15,6 +15,8 @@
     #ffffff 52%,
     #f29707 82%
   );
+  --gradient-play-on-border-stops:
+    #ffd07c 0deg, #f7a81c 90deg, #ffffff 180deg, #f29707 270deg, #ffd07c 360deg;
   --gradient-decor: radial-gradient(#8aaae6 37%, #1e46c0 100%);
 
   --font-display: 'Fredoka', sans-serif;

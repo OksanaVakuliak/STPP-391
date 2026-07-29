@@ -24,11 +24,7 @@
   height: 122%;
   background: conic-gradient(
     from var(--angle),
-    #ffd07c 0deg,
-    #f7a81c 90deg,
-    #ffffff 180deg,
-    #f29707 270deg,
-    #ffd07c 360deg
+    var(--gradient-play-on-border-stops)
   );
   border-radius: inherit;
   z-index: -1;
