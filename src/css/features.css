@@ -4,16 +4,23 @@
   padding-top: 32px;
   padding-bottom: 32px;
   background-color: var(--color-accent);
-  background-image:
-    url('../img/decor/curtain-mob-1.webp'),
-    url('../img/bg/features-mobile.webp');
+  background-image: url('../img/bg/features-mobile.webp');
   background-repeat: no-repeat;
-  background-position:
-    top center,
-    bottom center;
-  background-size:
-    100% 240px,
-    cover;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.features__rail {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 240px;
+  background-image: url('../img/decor/curtain-mob-1.webp');
+  background-repeat: no-repeat;
+  background-position: -40px top;
+  background-size: calc(100% + 80px) 100%;
 }
 
 .features__intro {
@@ -90,33 +97,33 @@
   .features {
     padding-top: 88px;
     padding-bottom: 120px;
-    background-image:
-      url('../img/decor/curtain-mob-1.webp'), url('../img/bg/features.webp');
-    background-size:
-      100% 344px,
-      cover;
+    background-image: url('../img/bg/features.webp');
+  }
+
+  .features__rail {
+    height: 344px;
   }
 
   .features::before,
   .features::after {
     content: '';
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     top: 244px;
     width: 500px;
     height: 1595px;
-    clip-path: inset(100px 0 0 0);
     background-image: url('../img/decor/curtain.webp');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: -20px top;
+    background-size: calc(100% + 20px) 100%;
   }
 
   .features::before {
-    left: max(0px, calc(50% - 720px));
+    left: 0;
   }
 
   .features::after {
-    right: max(0px, calc(50% - 720px));
+    right: 0;
     scale: -1 1;
   }
 
