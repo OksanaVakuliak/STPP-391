@@ -81,7 +81,7 @@
   display: grid;
   grid-template-rows: 0fr;
   padding-left: 26px;
-  transition: grid-template-rows 300ms ease;
+  transition: grid-template-rows var(--transition-default);
 }
 
 .faq__answer-inner {
