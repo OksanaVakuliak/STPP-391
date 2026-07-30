@@ -52,42 +52,47 @@
 }
 
 .contact__mail {
-  position: relative;
-  display: flex;
-  align-self: stretch;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 17px;
-  margin-top: 24px;
-  padding: 23px;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 16px;
   border-radius: var(--radius-card);
-  box-shadow: var(--shadow-button);
-  font-family: var(--font-display);
-  font-weight: var(--fw-medium);
-  font-size: 18px;
-  transition: box-shadow 300ms ease;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body);
+  line-height: 1.2;
+  letter-spacing: var(--ls-body);
 }
 
-.contact__mail::before {
-  content: '';
+.contact__icon {
+  flex-shrink: 0;
+}
+
+.contact__address {
+  position: relative;
+}
+
+.contact__arrow {
   position: absolute;
-  inset: 0;
-  padding: var(--border-card);
-  border-radius: inherit;
-  background: conic-gradient(from var(--angle), var(--gradient-button-colors));
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  animation: border-rotate 2.8s linear infinite;
+  top: 50%;
+  left: calc(100% + 8px);
+  opacity: 0;
+  translate: 0 -50%;
+  transition:
+    opacity 300ms ease,
+    translate 300ms ease;
 }
 
-.contact__mail:active {
-  box-shadow: none;
+@media (hover: hover) {
+  .contact__mail:hover .contact__arrow {
+    opacity: 1;
+  }
+}
+
+.contact__mail:active .contact__arrow {
+  opacity: 1;
+  translate: 8px -50%;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -123,8 +128,18 @@
   }
 
   .contact__mail {
-    align-self: center;
-    padding: 27px 50px;
+    margin-top: 24px;
     font-size: var(--fs-button);
+    letter-spacing: normal;
+  }
+
+  .contact__icon {
+    width: 30px;
+    height: 24px;
+  }
+
+  .contact__arrow {
+    width: 20px;
+    height: 20px;
   }
 }
