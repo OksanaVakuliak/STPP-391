@@ -45,7 +45,7 @@
   background-color: currentColor;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 300ms ease;
+  transition: transform var(--transition-default);
 }
 
 .footer__copyright {
