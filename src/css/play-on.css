@@ -1,0 +1,83 @@
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.play-on {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 4px 18px;
+  width: 178px;
+  border-radius: 22px;
+  background: var(--color-batten);
+  transition: background var(--transition-default);
+}
+
+.play-on::before {
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 122%;
+  background: conic-gradient(
+    from var(--angle),
+    var(--gradient-play-on-border-stops)
+  );
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: var(--shadow-button);
+
+  animation: border-rotate 2.8s linear infinite;
+}
+
+.play-on__icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+.play-on__text {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 16px;
+  text-align: left;
+  text-wrap: wrap;
+  line-height: 100%;
+  letter-spacing: var(--ls-body);
+  color: var(--color-white);
+}
+
+@keyframes border-rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .play-on::before {
+    animation: none;
+  }
+
+  .play-on {
+    transition: none;
+  }
+}
+
+@media (hover: hover) {
+  .play-on:hover {
+    background: var(--color-accent);
+    cursor: pointer;
+  }
+  .play-on:hover::before {
+    animation-play-state: paused;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .play-on {
+    display: flex;
+  }
+}

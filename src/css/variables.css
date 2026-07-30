@@ -7,9 +7,16 @@
   --color-border-alt: #8f1a86;
   --color-text: #00050d;
   --color-white: #ffffff;
+  --color-glass: rgba(255, 255, 255, 0.3);
 
-  --gradient-button-colors: #ffd07c 32%, #f7a81c 47%, #ffffff 52%, #f29707 82%;
-  --gradient-button-border: conic-gradient(var(--gradient-button-colors));
+  --gradient-button-border: conic-gradient(
+    #ffd07c 32%,
+    #f7a81c 47%,
+    #ffffff 52%,
+    #f29707 82%
+  );
+  --gradient-play-on-border-stops:
+    #ffd07c 0deg, #f7a81c 90deg, #ffffff 180deg, #f29707 270deg, #ffd07c 360deg;
   --gradient-decor: radial-gradient(#8aaae6 37%, #1e46c0 100%);
 
   --font-display: 'Fredoka', sans-serif;
@@ -42,6 +49,8 @@
 
   --container-padding: 16px;
   --container-max: 375px;
+
+  --transition-default: 0.3s ease-in-out;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -51,7 +60,7 @@
     --fs-h3: 28px;
     --fs-body: 20px;
 
-    --container-padding: 32px;
+    --container-padding: 120px;
     --container-max: 1440px;
   }
 }
