@@ -1,0 +1,74 @@
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.play-on-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 13px 20px;
+  width: 320px;
+  border-radius: 32px;
+
+  border: 5px solid transparent;
+
+  background:
+    linear-gradient(var(--color-batten), var(--color-batten)) padding-box,
+    conic-gradient(from var(--angle), var(--gradient-play-on-border-stops))
+      border-box;
+
+  box-shadow: var(--shadow-button);
+  transition: background var(--transition-default);
+  animation: border-rotate 2.8s linear infinite;
+}
+
+.play-on-hero__icon {
+  color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+}
+
+.play-on-hero__text {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 22px;
+  text-align: left;
+  line-height: 100%;
+  letter-spacing: var(--ls-body);
+  color: var(--color-white);
+}
+
+@keyframes border-rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .play-on-hero {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (hover: hover) {
+  .play-on-hero:hover {
+    background:
+      linear-gradient(var(--color-accent), var(--color-accent)) padding-box,
+      conic-gradient(from var(--angle), var(--gradient-play-on-border-stops))
+        border-box;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1440px) {
+  .play-on-hero {
+    width: 282px;
+    font-size: 22px;
+    padding: 13px 44px;
+  }
+}
