@@ -1,22 +1,19 @@
 .features {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
+  z-index: 1;
   padding-top: 32px;
   padding-bottom: 32px;
   background-color: var(--color-accent);
   background-image:
-    linear-gradient(
-      var(--color-accent) 198px,
-      var(--color-curtain-rail) 198px 240px,
-      transparent 240px
-    ),
+    url('../img/decor/curtain-mob-1.webp'),
     url('../img/bg/features-mobile.webp');
   background-repeat: no-repeat;
   background-position:
     top center,
     bottom center;
-  background-size: auto, cover;
+  background-size:
+    100% 240px,
+    cover;
 }
 
 .features__intro {
@@ -94,12 +91,10 @@
     padding-top: 88px;
     padding-bottom: 120px;
     background-image:
-      linear-gradient(
-        var(--color-accent) 278px,
-        var(--color-curtain-rail) 278px 332px,
-        transparent 332px
-      ),
-      url('../img/bg/features.webp');
+      url('../img/decor/curtain-mob-1.webp'), url('../img/bg/features.webp');
+    background-size:
+      100% 344px,
+      cover;
   }
 
   .features::before,
@@ -107,9 +102,10 @@
     content: '';
     position: absolute;
     z-index: -1;
-    top: 292px;
+    top: 244px;
     width: 500px;
-    aspect-ratio: 1019 / 3109;
+    height: 1595px;
+    clip-path: inset(100px 0 0 0);
     background-image: url('../img/decor/curtain.webp');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -130,6 +126,10 @@
 
   .features__slider {
     margin-top: 28px;
+  }
+
+  .features .features__slider {
+    overflow: visible;
   }
 
   .features__slider .features__list {
@@ -168,15 +168,15 @@
 
   .features__item:nth-child(1) .features__card,
   .features__item:nth-child(4) .features__card {
-    rotate: 16deg;
-  }
-
-  .features__item:nth-child(3) .features__card {
     rotate: -16deg;
   }
 
+  .features__item:nth-child(3) .features__card {
+    rotate: 16deg;
+  }
+
   .features__item:nth-child(5) .features__card {
-    rotate: -17deg;
+    rotate: 17deg;
   }
 
   .features .features__pagination {
