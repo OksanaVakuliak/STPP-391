@@ -56,8 +56,7 @@ body[data-menu-open='true'] {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: var(--color-glass);
-  backdrop-filter: blur(4px);
+  background: var(--color-footer);
   transform: translateX(100%);
   transition:
     opacity var(--transition-default),
