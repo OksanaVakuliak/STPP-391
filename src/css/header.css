@@ -8,8 +8,7 @@
   width: 100%;
   min-height: 62px;
   color: var(--color-white);
-  background: var(--color-glass);
-  backdrop-filter: blur(4px);
+  background: var(--color-footer);
   display: flex;
   align-items: center;
   transition: transform var(--transition-default);
