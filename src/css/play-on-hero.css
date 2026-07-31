@@ -29,17 +29,11 @@
 .play-on-hero__text {
   font-family: var(--font-body);
   font-weight: var(--fw-bold);
-  font-size: 22px;
+  font-size: var(--fs-button);
   text-align: left;
   line-height: 100%;
   letter-spacing: var(--ls-body);
   color: var(--color-white);
-}
-
-@keyframes border-rotate {
-  to {
-    --angle: 360deg;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -55,14 +49,12 @@
       linear-gradient(var(--color-accent), var(--color-accent)) padding-box,
       conic-gradient(from var(--angle), var(--gradient-play-on-border-stops))
         border-box;
-    cursor: pointer;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .play-on-hero {
     width: 282px;
-    font-size: 22px;
     padding: 13px 44px;
   }
 }

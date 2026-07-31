@@ -42,12 +42,6 @@
   color: var(--color-white);
 }
 
-@keyframes border-rotate {
-  to {
-    --angle: 360deg;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .play-on {
     animation: none;
@@ -61,7 +55,6 @@
       linear-gradient(var(--color-accent), var(--color-accent)) padding-box,
       conic-gradient(from var(--angle), var(--gradient-play-on-border-stops))
         border-box;
-    cursor: pointer;
   }
 }
 
