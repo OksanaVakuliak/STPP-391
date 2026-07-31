@@ -4,12 +4,13 @@
   background-color: var(--color-accent);
   background-image: url('../img/bg/faq-mobile.webp');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: top center;
+  background-size: 100% auto;
 }
 
 .faq__card {
   position: relative;
+  z-index: 2;
   padding: 28px 12px;
   border: var(--border-card) solid var(--color-border);
   border-radius: var(--radius-card);
