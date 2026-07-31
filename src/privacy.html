@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <title>Privacy Policy</title>
+    <title>Privacy Policy — Royal Journey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,15 +16,46 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" />
+    <load src="./partials/header-legal.html" />
 
-    <main>
+    <main class="legal">
       <div class="container">
-        <h1 class="main-title">Privacy Policy</h1>
-        <load src="./partials/back-link.html" />
+        <div class="legal__inner">
+          <load src="./partials/back-link.html" />
+          <h1 class="legal__heading">Privacy Policy</h1>
+          <div class="legal__content">
+            <p>
+              Royal Journey does not collect or send any player data to any
+              servers other than Apple’s for Game Center and iCloud. We do not
+              collect any player data using third party servers or
+              intermediaries of any kind.
+            </p>
+            <p>
+              Royal Journey collects data and stores it on Apple services such
+              as iCloud and Game Center. We use iCloud to save your game, and
+              Game Center to keep track of achievements and leaderboards. We do
+              not store personal or gameplay data on our servers.
+            </p>
+            <p>
+              Royal Journey collects, uses, and discloses data from kids in the
+              same way as for other users, as described in this policy. Royal
+              Journey’s use of kids’ data is limited to support internal
+              operations of the game. Parents can request deletion of data by
+              contacting us at
+              <a href="mailto:support@rapidbanner.space">support@rapidbanner.space</a>.
+            </p>
+            <p>
+              If you have any questions or suggestions about our Privacy Policy,
+              do not hesitate to contact us at
+              <a href="mailto:info@rapidbanner.space">info@rapidbanner.space</a>.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
 
     <load src="./partials/footer.html" />
+
+    <script type="module" src="./legal.js"></script>
   </body>
 </html>
