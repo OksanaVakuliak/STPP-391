@@ -39,3 +39,17 @@ const syncFeatures = () => {
 
 syncFeatures();
 mobile.addEventListener('change', syncFeatures);
+
+const playSwiper = new Swiper('.how-to-play__swiper', {
+  modules: [Pagination],
+  slidesPerView: 1,
+  spaceBetween: 16,
+  pagination: {
+    el: '.how-to-play__pagination',
+    clickable: true,
+  },
+  on: {
+    afterInit: shiftDots,
+    slideChange: shiftDots,
+  },
+});
