@@ -39,7 +39,7 @@
 @media only screen and (min-width: 1440px) {
   .hero {
     padding-top: 197px;
-    height: 767px;
+    min-height: 767px;
     background: url('../img/bg/hero.webp') no-repeat center center;
     background-size: cover;
   }
