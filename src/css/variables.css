@@ -7,8 +7,7 @@
   --color-border-alt: #8f1a86;
   --color-text: #00050d;
   --color-white: #ffffff;
-  --color-glass: rgba(255, 255, 255, 0.3);
-
+  --color-bg-shadow: rgba(1, 7, 28, 0.34);
   --gradient-button-border: conic-gradient(
     #ffd07c 32%,
     #f7a81c 47%,
@@ -42,7 +41,9 @@
   --fw-bold: 700;
 
   --radius-card: 32px;
+  --radius-card-lg: 64px;
   --border-card: 4px;
+  --border-card-lg: 6px;
 
   --shadow-button: 8px 8px 8px 2px rgba(7, 5, 83, 0.25);
   --shadow-faq: 4px 4px 12px rgba(0, 0, 0, 0.25);
