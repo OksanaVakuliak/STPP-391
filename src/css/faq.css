@@ -66,16 +66,18 @@
   margin-top: calc((1em * var(--lh-heading) - 24px) / 2);
 }
 
-.faq__minus {
-  display: none;
+.faq__bar {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform var(--transition-default);
 }
 
-.faq__item[data-open] .faq__plus {
-  display: none;
+.faq__bar--turn {
+  transform: rotate(90deg);
 }
 
-.faq__item[data-open] .faq__minus {
-  display: block;
+.faq__item[data-open] .faq__bar--turn {
+  transform: rotate(0deg);
 }
 
 .faq__answer {
@@ -95,6 +97,12 @@
 
 .faq__item[data-open] .faq__answer {
   grid-template-rows: 1fr;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__bar {
+    transition: none;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
