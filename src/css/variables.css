@@ -7,8 +7,7 @@
   --color-border-alt: #8f1a86;
   --color-text: #00050d;
   --color-white: #ffffff;
-  --color-glass: rgba(255, 255, 255, 0.3);
-
+  --color-bg-shadow: rgba(1, 7, 28, 0.34);
   --gradient-button-border: conic-gradient(
     #ffd07c 32%,
     #f7a81c 47%,

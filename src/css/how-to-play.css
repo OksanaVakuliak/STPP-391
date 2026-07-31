@@ -1,0 +1,148 @@
+.how-to-play {
+  width: 100%;
+  min-height: 591px;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 28px;
+
+  font-family: var(--font-display);
+  letter-spacing: var(--ls-h3);
+  line-height: var(--lh-heading);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.how-to-play::before {
+  content: '';
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-bg-shadow);
+  z-index: -1;
+}
+
+.how-to-play__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.features__intro {
+  position: relative;
+  z-index: 2;
+}
+
+.how-to-play__title {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-h2);
+  letter-spacing: var(--ls-h2);
+
+  color: var(--color-white);
+
+  margin-bottom: 8px;
+}
+
+.how-to-play__subtitle {
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+  color: var(--color-white);
+
+  margin-bottom: 28px;
+}
+
+.how-to-play__footer-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  max-height: 235px;
+}
+
+.how-to-play__slider {
+  position: relative;
+  z-index: 2;
+}
+
+.how-to-play__list {
+  font-family: var(--font-display);
+  letter-spacing: var(--ls-h3);
+  line-height: var(--lh-heading);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.how-to-play__item {
+  border: 4px solid #f29707;
+  border-radius: var(--radius-card);
+  padding: 28px;
+  width: 343px;
+  height: 369px;
+
+  background: #ffedcf;
+}
+
+.how-to-play__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.how-to-play__card-title {
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h3);
+}
+
+.how-to-play__card-text {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+.how-to-play__card-image {
+  width: 279px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .how-to-play {
+    min-height: 1242px;
+  }
+  .how-to-play__title {
+    margin-bottom: 20px;
+  }
+
+  .how-to-play__subtitle {
+    margin-bottom: 48px;
+  }
+
+  .how-to-play__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .how-to-play__item {
+    width: calc((100% - 48px) / 3);
+    padding: 36px;
+    width: 384px;
+    height: 452px;
+  }
+  .how-to-play__card-image {
+    width: 304px;
+  }
+  .how-to-play__footer-image {
+    width: 100%;
+    max-height: 461px;
+  }
+}
