@@ -85,10 +85,10 @@ body[data-menu-open='true'] {
   transform: translateX(0);
 }
 
-.mobile-menu__list::before {
+.mobile-menu__wrapper::before {
   content: '';
   position: absolute;
-  bottom: -249px;
+  bottom: 80px;
   left: 24px;
   width: 53px;
   height: 104px;
@@ -96,10 +96,10 @@ body[data-menu-open='true'] {
   background-size: contain;
 }
 
-.mobile-menu__list::after {
+.mobile-menu__wrapper::after {
   content: '';
   position: absolute;
-  bottom: -249px;
+  bottom: 80px;
   right: 24px;
   width: 130px;
   height: 287px;
