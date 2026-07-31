@@ -24,6 +24,10 @@ ul {
   list-style: none;
 }
 
+ol {
+  margin: 0;
+}
+
 a {
   color: currentColor;
   text-decoration: none;
