@@ -5,24 +5,40 @@
 }
 
 .play-on {
+  position: relative;
+  isolation: isolate;
   display: none;
   align-items: center;
   justify-content: center;
   gap: 11px;
-  padding: 4px 14px;
+  padding: 6px 14px;
   width: 178px;
   border-radius: var(--radius-card);
+  border: 2px solid transparent;
 
-  border: 4px solid transparent;
-
-  background:
-    linear-gradient(var(--color-batten), var(--color-batten)) padding-box,
-    conic-gradient(from var(--angle), var(--gradient-play-on-border-stops))
-      border-box;
+  background: conic-gradient(
+      from var(--angle),
+      var(--gradient-play-on-border-stops)
+    )
+    border-box;
 
   box-shadow: var(--shadow-button);
-  transition: background var(--transition-default);
   animation: border-rotate 2.8s linear infinite;
+}
+
+.play-on::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: calc(var(--radius-card) - 2px);
+  background-color: var(--color-batten);
+  transition: background-color var(--transition-default);
+  z-index: 0;
+}
+
+.play-on > * {
+  position: relative;
+  z-index: 1;
 }
 
 .play-on__icon {
@@ -50,11 +66,8 @@
 }
 
 @media (hover: hover) {
-  .play-on:hover {
-    background:
-      linear-gradient(var(--color-accent), var(--color-accent)) padding-box,
-      conic-gradient(from var(--angle), var(--gradient-play-on-border-stops))
-        border-box;
+  .play-on:hover::before {
+    background-color: var(--color-accent);
   }
 }
 
