@@ -43,7 +43,7 @@
 }
 
 .legal__content a {
-  color: var(--color-accent);
+  color: var(--color-batten);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color var(--transition-default);
@@ -51,7 +51,7 @@
 
 @media (hover: hover) {
   .legal__content a:hover {
-    color: var(--color-batten);
+    color: var(--color-accent);
   }
 }
 
