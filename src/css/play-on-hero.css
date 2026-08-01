@@ -53,8 +53,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .play-on-hero {
-    animation: none;
+  .play-on::before {
     transition: none;
   }
 }
@@ -68,6 +67,6 @@
 @media only screen and (min-width: 1440px) {
   .play-on-hero {
     width: 282px;
-    padding: 14px 44px;
+    padding: 12px 44px;
   }
 }
