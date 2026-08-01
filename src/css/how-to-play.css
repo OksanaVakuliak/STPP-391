@@ -48,7 +48,7 @@
   margin-bottom: 8px;
 }
 
-.how-to-play__subtitle {
+.how-to-play .how-to-play__subtitle {
   font-weight: var(--fw-medium);
   font-size: var(--fs-h3);
   line-height: var(--lh-heading);
@@ -76,25 +76,27 @@
   line-height: var(--lh-heading);
   text-align: center;
   color: var(--color-text);
+  align-items: stretch;
 }
 
 .how-to-play__list .how-to-play__item {
   border: var(--border-card) solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 24px;
-  width: 343px;
-  height: 369px;
+  height: auto;
+  min-height: 369px;
 
   background: #ffedcf;
 }
 
-.how-to-play__card {
+.how-to-play .how-to-play__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  gap: 24px;
 }
 
 .how-to-play__card-title {
@@ -112,6 +114,7 @@
 
 .how-to-play__card-image {
   width: 279px;
+  height: 208px;
 }
 
 .how-to-play .how-to-play__pagination {
@@ -150,7 +153,7 @@
     margin-bottom: 20px;
   }
 
-  .how-to-play__subtitle {
+  .how-to-play .how-to-play__subtitle {
     margin-bottom: 48px;
   }
 
@@ -161,10 +164,11 @@
     gap: 24px;
   }
 
-  .how-to-play__list .how-to-play__item {
+  .how-to-play .how-to-play__list .how-to-play__item {
     width: calc((100% - 48px) / 3);
     padding: 32px;
-    height: 452px;
+    height: auto;
+    min-height: 452px;
   }
   .how-to-play__card-title {
     margin-bottom: 12px;
