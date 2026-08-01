@@ -86,7 +86,7 @@
   height: auto;
   min-height: 369px;
 
-  background: #ffedcf;
+  background: var(--color-bg);
 }
 
 .how-to-play .how-to-play__card {

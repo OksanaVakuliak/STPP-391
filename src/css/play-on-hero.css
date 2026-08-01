@@ -53,7 +53,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .play-on::before {
+  .play-on-hero,
+  .play-on-hero::before {
+    animation: none;
     transition: none;
   }
 }

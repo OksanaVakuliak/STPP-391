@@ -61,7 +61,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .play-on {
+  .play-on,
+  .play-on::before {
     animation: none;
     transition: none;
   }
