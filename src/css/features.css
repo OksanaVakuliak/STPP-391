@@ -45,19 +45,54 @@
   height: auto;
 }
 
+.features__flip {
+  position: relative;
+  display: grid;
+  max-width: 284px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .features__card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 284px;
-  height: 100%;
-  margin: 0 auto;
   padding: 24px;
   border: var(--border-card) solid var(--color-border-alt);
   border-radius: var(--radius-card);
   background-color: var(--color-bg);
   color: var(--color-text);
   text-align: center;
+}
+
+.features__back {
+  display: none;
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  border: var(--border-card) solid var(--color-border-alt);
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg);
+  background-image: url('../img/decor/card-noise.webp');
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.features__back-title {
+  display: block;
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background-color: var(--color-glass-warm);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-h3);
+  color: var(--color-footer);
+  text-align: center;
+  -webkit-text-stroke: var(--text-stroke-card) var(--color-white);
+  paint-order: stroke fill;
 }
 
 .features__image {
@@ -165,44 +200,131 @@
   .features__item {
     grid-column: span 2;
     justify-self: center;
+    perspective: var(--perspective-card);
+    transform: rotate(var(--deal-tilt));
   }
 
-  .features__item:nth-child(1),
-  .features__item:nth-child(3) {
+  .features__item:nth-child(1) {
+    --deal-tilt: -16deg;
+    --deal-fan: 0deg;
+    --deal-x: 388px;
+    --deal-y: 505px;
+    --deal-delay: 0s;
+
+    z-index: 5;
     margin-top: 71px;
   }
 
   .features__item:nth-child(2) {
+    --deal-tilt: 0deg;
+    --deal-fan: -16deg;
+    --deal-x: -88px;
+    --deal-y: 603px;
+    --deal-delay: 0.14s;
+
+    z-index: 4;
     grid-column: 3 / span 2;
   }
 
+  .features__item:nth-child(3) {
+    --deal-tilt: 16deg;
+    --deal-fan: 16deg;
+    --deal-x: -299px;
+    --deal-y: 527px;
+    --deal-delay: 0.28s;
+
+    z-index: 3;
+    margin-top: 71px;
+  }
+
   .features__item:nth-child(4) {
+    --deal-tilt: -16deg;
+    --deal-fan: -20deg;
+    --deal-x: 36px;
+    --deal-y: 101px;
+    --deal-delay: 0.42s;
+
+    z-index: 2;
     grid-column: 2 / span 2;
   }
 
   .features__item:nth-child(5) {
+    --deal-tilt: 17deg;
+    --deal-fan: 20deg;
+    --deal-x: -34px;
+    --deal-y: 104px;
+    --deal-delay: 0.56s;
+
+    z-index: 1;
     grid-column: 4 / span 2;
   }
 
-  .features__card {
-    height: auto;
+  .features__flip {
     min-height: 446px;
+    transform-style: preserve-3d;
   }
 
-  .features__item:nth-child(1) .features__card,
-  .features__item:nth-child(4) .features__card {
-    rotate: -16deg;
+  .features__card {
+    backface-visibility: hidden;
   }
 
-  .features__item:nth-child(3) .features__card {
-    rotate: 16deg;
+  .features__back {
+    display: block;
   }
 
-  .features__item:nth-child(5) .features__card {
-    rotate: 17deg;
+  .features__list[data-reveal] .features__item {
+    transform: translate(var(--deal-x), var(--deal-y)) rotate(var(--deal-fan))
+      scale(var(--deal-scale));
+  }
+
+  .features__list[data-reveal] .features__flip {
+    transform: rotateY(180deg);
+  }
+
+  .features__list[data-reveal='visible'] .features__item {
+    animation: features-deal var(--duration-deal) var(--ease-deal)
+      var(--deal-delay) both;
+  }
+
+  .features__list[data-reveal='visible'] .features__flip {
+    animation: features-flip var(--duration-flip) ease-out
+      calc(var(--deal-delay) + var(--delay-flip)) both;
   }
 
   .features .features__pagination {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (prefers-reduced-motion: reduce) {
+  .features__list[data-reveal] .features__item,
+  .features__list[data-reveal='visible'] .features__item {
+    transform: rotate(var(--deal-tilt));
+    animation: none;
+  }
+
+  .features__list[data-reveal] .features__flip,
+  .features__list[data-reveal='visible'] .features__flip {
+    transform: none;
+    animation: none;
+  }
+}
+
+@keyframes features-deal {
+  from {
+    transform: translate(var(--deal-x), var(--deal-y)) rotate(var(--deal-fan))
+      scale(var(--deal-scale));
+  }
+  to {
+    transform: translate(0, 0) rotate(var(--deal-tilt)) scale(1);
+  }
+}
+
+@keyframes features-flip {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
