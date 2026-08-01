@@ -28,6 +28,11 @@ if (mobileMenuBtn && menuWrapper) {
 
   const closeMenu = () => setMenuState(false);
   const toggleMenu = () => setMenuState(!isMenuOpen());
+  const closeMenuOnDesktop = () => {
+    if (window.innerWidth > 375 && isMenuOpen()) {
+      closeMenu();
+    }
+  };
 
   if (!mobileMenuBtn.hasAttribute('data-open')) {
     setMenuState(false);
@@ -51,4 +56,7 @@ if (mobileMenuBtn && menuWrapper) {
       closeMenu();
     }
   });
+
+  window.addEventListener('resize', closeMenuOnDesktop);
+  closeMenuOnDesktop();
 }
