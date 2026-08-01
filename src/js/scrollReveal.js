@@ -1,6 +1,20 @@
-const targets = document.querySelectorAll('[data-reveal]');
+const DEFAULT_MARGIN = '0px 0px -20% 0px';
 
-if (targets.length) {
+const groups = new Map();
+
+document.querySelectorAll('[data-reveal]').forEach(target => {
+  const margin = target.dataset.revealMargin || DEFAULT_MARGIN;
+  const group = groups.get(margin);
+
+  if (group) {
+    group.push(target);
+    return;
+  }
+
+  groups.set(margin, [target]);
+});
+
+groups.forEach((targets, rootMargin) => {
   const observer = new IntersectionObserver(
     (entries, instance) => {
       entries.forEach(entry => {
@@ -10,8 +24,8 @@ if (targets.length) {
         instance.unobserve(entry.target);
       });
     },
-    { threshold: 0.2 }
+    { rootMargin }
   );
 
   targets.forEach(target => observer.observe(target));
-}
+});

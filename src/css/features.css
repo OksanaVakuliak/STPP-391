@@ -272,21 +272,21 @@
     display: block;
   }
 
-  .features[data-reveal] .features__item {
+  .features__list[data-reveal] .features__item {
     transform: translate(var(--deal-x), var(--deal-y)) rotate(var(--deal-fan))
       scale(var(--deal-scale));
   }
 
-  .features[data-reveal] .features__flip {
+  .features__list[data-reveal] .features__flip {
     transform: rotateY(180deg);
   }
 
-  .features[data-reveal='visible'] .features__item {
+  .features__list[data-reveal='visible'] .features__item {
     animation: features-deal var(--duration-deal) var(--ease-deal)
       var(--deal-delay) both;
   }
 
-  .features[data-reveal='visible'] .features__flip {
+  .features__list[data-reveal='visible'] .features__flip {
     animation: features-flip var(--duration-flip) ease-out
       calc(var(--deal-delay) + var(--delay-flip)) both;
   }
@@ -297,14 +297,14 @@
 }
 
 @media only screen and (min-width: 1440px) and (prefers-reduced-motion: reduce) {
-  .features[data-reveal] .features__item,
-  .features[data-reveal='visible'] .features__item {
+  .features__list[data-reveal] .features__item,
+  .features__list[data-reveal='visible'] .features__item {
     transform: rotate(var(--deal-tilt));
     animation: none;
   }
 
-  .features[data-reveal] .features__flip,
-  .features[data-reveal='visible'] .features__flip {
+  .features__list[data-reveal] .features__flip,
+  .features__list[data-reveal='visible'] .features__flip {
     transform: none;
     animation: none;
   }
