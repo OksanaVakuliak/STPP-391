@@ -207,8 +207,8 @@
   .features__item:nth-child(1) {
     --deal-tilt: -16deg;
     --deal-fan: 0deg;
-    --deal-x: 400px;
-    --deal-y: 606px;
+    --deal-x: 388px;
+    --deal-y: 505px;
     --deal-delay: 0s;
 
     z-index: 5;
@@ -218,8 +218,8 @@
   .features__item:nth-child(2) {
     --deal-tilt: 0deg;
     --deal-fan: -16deg;
-    --deal-x: 0px;
-    --deal-y: 677px;
+    --deal-x: -88px;
+    --deal-y: 603px;
     --deal-delay: 0.14s;
 
     z-index: 4;
@@ -229,8 +229,8 @@
   .features__item:nth-child(3) {
     --deal-tilt: 16deg;
     --deal-fan: 16deg;
-    --deal-x: -400px;
-    --deal-y: 606px;
+    --deal-x: -299px;
+    --deal-y: 527px;
     --deal-delay: 0.28s;
 
     z-index: 3;
@@ -240,8 +240,8 @@
   .features__item:nth-child(4) {
     --deal-tilt: -16deg;
     --deal-fan: -20deg;
-    --deal-x: 200px;
-    --deal-y: 134px;
+    --deal-x: 36px;
+    --deal-y: 101px;
     --deal-delay: 0.42s;
 
     z-index: 2;
@@ -251,8 +251,8 @@
   .features__item:nth-child(5) {
     --deal-tilt: 17deg;
     --deal-fan: 20deg;
-    --deal-x: -200px;
-    --deal-y: 134px;
+    --deal-x: -34px;
+    --deal-y: 104px;
     --deal-delay: 0.56s;
 
     z-index: 1;
