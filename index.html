@@ -13,17 +13,17 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/STPP-391/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/STPP-391/assets/headerScroll-D1BX9DoA.js">
+    <link rel="modulepreload" crossorigin href="/STPP-391/assets/headerScroll-KtYhNpSZ.js">
     <link rel="modulepreload" crossorigin href="/STPP-391/assets/vendor-JJYSNWsT.js">
-    <link rel="stylesheet" crossorigin href="/STPP-391/assets/headerScroll-fLkveWZ5.css">
+    <link rel="stylesheet" crossorigin href="/STPP-391/assets/headerScroll-ZBXoLvun.css">
     <link rel="stylesheet" crossorigin href="/STPP-391/assets/vendor-CCK7RXJZ.css">
   </head>
   <body>
-    <header class="header" data-hidden="true">
+    <header class="header" id="header" data-hidden="true">
   <div class="container">
     <nav class="nav">
       <div class="nav__logo">
-        <a href="/"><img src="/STPP-391/assets/logo-CmOxXw_e.webp" alt="logo" /></a>
+        <a href="#hero"><img src="/STPP-391/assets/logo-CmOxXw_e.webp" alt="logo" /></a>
       </div>
       <button
   type="button"
@@ -62,7 +62,7 @@
 >
   <ul class="mobile-menu__list">
     <li class="mobile-menu__item">
-      <a href="/" class="mobile-menu__link">Home</a>
+      <a href="#hero" class="mobile-menu__link">Home</a>
     </li>
     <li class="mobile-menu__item">
       <a href="#about" class="mobile-menu__link">About </a>
@@ -77,11 +77,26 @@
       <a href="#faq" class="mobile-menu__link">FAQ</a>
     </li>
   </ul>
+
+  <div class="mobile-menu__btn">
+    <a
+  class="play-on-mobile"
+  href="https://play.google.com/store/apps/details?id=com.koofei.matchmansion&hl=en&gl=us"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <svg class="play-on-mobile__icon" width="30" height="30" viewBox="0 0 30 30">
+    <use href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-google-play"></use>
+  </svg>
+  <p class="play-on-mobile__text">Play on Google Play</p>
+</a>
+
+  </div>
 </div>
 
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="/" class="menu__link">Home</a>
+          <a href="#hero" class="menu__link">Home</a>
         </li>
         <li class="menu__item">
           <a href="#about" class="menu__link">About </a>
@@ -113,7 +128,7 @@
 </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
   <div class="container hero__container">
     <p class="hero__descr">
       Join King William's royal expedition through thousands of match-3 levels
@@ -188,7 +203,133 @@
   </div>
 </section>
 
-      
+      <section class="how-to-play" id="how-to-play">
+  <div class="container">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="/STPP-391/assets/how-to-play-3kAG5auq.webp" />
+      <img
+        src="/STPP-391/assets/how-to-play-mobile-DuGpEkvq.webp"
+        alt=""
+        class="how-to-play__image"
+        loading="lazy"
+        width="258"
+        height="559"
+      />
+    </picture>
+    <div class="how-to-play__intro">
+      <h2 class="how-to-play__title">How to Play</h2>
+      <p class="how-to-play__subtitle">Simple matches, worldwide adventure</p>
+    </div>
+    <div class="how-to-play__slider swiper">
+      <ul class="how-to-play__list swiper-wrapper">
+        <li class="how-to-play__item swiper-slide">
+          <article class="how-to-play__card">
+            <div class="how-to-play__card-content">
+              <h3 class="how-to-play__card-title">Swap & Match Tiles</h3>
+              <p class="how-to-play__card-text">
+                Match three or more identical items to clear the board.
+              </p>
+            </div>
+            <img
+              class="how-to-play__card-image"
+              src="/STPP-391/assets/step-1-B-GkSMzY.webp"
+              alt="step 1 image"
+              width="608"
+              height="416"
+              loading="lazy"
+            />
+          </article>
+        </li>
+        <li class="how-to-play__item swiper-slide">
+          <article class="how-to-play__card">
+            <div class="how-to-play__card-content">
+              <h3 class="how-to-play__card-title">Travel Between Cities</h3>
+              <p class="how-to-play__card-text">
+                Progress unlocks new destinations around the world.
+              </p>
+            </div>
+            <img
+              class="how-to-play__card-image"
+              src="/STPP-391/assets/step-2-Dlfqm1WC.webp"
+              alt="step 2 image"
+              width="608"
+              height="416"
+              loading="lazy"
+            />
+          </article>
+        </li>
+        <li class="how-to-play__item swiper-slide">
+          <article class="how-to-play__card">
+            <div class="how-to-play__card-content">
+              <h3 class="how-to-play__card-title">Complete Level Objectives</h3>
+              <p class="how-to-play__card-text">
+                Solve puzzles to advance King William's journey.
+              </p>
+            </div>
+            <img
+              class="how-to-play__card-image"
+              src="/STPP-391/assets/step-3-BuEf_G1m.webp"
+              alt="step 3 image"
+              width="608"
+              height="416"
+              loading="lazy"
+            />
+          </article>
+        </li>
+        <li class="how-to-play__item swiper-slide">
+          <article class="how-to-play__card">
+            <div class="how-to-play__card-content">
+              <h3 class="how-to-play__card-title">Collect Royal Rewards</h3>
+              <p class="how-to-play__card-text">
+                Earn treasures and bonuses as you progress.
+              </p>
+            </div>
+            <img
+              class="how-to-play__card-image"
+              src="/STPP-391/assets/step-4-_ws8uR9c.webp"
+              alt="step 4 image"
+              width="608"
+              height="412"
+              loading="lazy"
+            />
+          </article>
+        </li>
+        <li class="how-to-play__item swiper-slide">
+          <article class="how-to-play__card">
+            <div class="how-to-play__card-content">
+              <h3 class="how-to-play__card-title">Play Anytime, Anywhere</h3>
+              <p class="how-to-play__card-text">
+                Enjoy offline play with no connection required.
+              </p>
+            </div>
+            <img
+              class="how-to-play__card-image"
+              src="/STPP-391/assets/step-5-CBLq4mVU.webp"
+              alt="step 5 image"
+              width="608"
+              height="416"
+              loading="lazy"
+            />
+          </article>
+        </li>
+      </ul>
+    </div>
+    <div class="how-to-play__pagination swiper-pagination"></div>
+
+    <picture>
+      <source media="(min-width: 1440px)" srcset="/STPP-391/assets/arc-DhppWcXJ.webp" />
+      <img
+        src="/STPP-391/assets/curtain-mob-2-BLzD0FLu.webp"
+        alt=""
+        class="how-to-play__footer-image"
+        loading="lazy"
+        width="376"
+        height="243"
+      />
+    </picture>
+  </div>
+</section>
+
       <section class="features" id="features">
   <div class="container">
     <div class="features__intro">
