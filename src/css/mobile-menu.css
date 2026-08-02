@@ -60,13 +60,28 @@ body[data-menu-open='true'] {
   left: 0;
   height: calc(100dvh - 62px);
   z-index: 999;
-  background: rgba(5, 43, 159, 0.3);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background: rgba(5, 43, 159, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   transform: translateX(100%);
   transition:
     opacity var(--transition-default),
     transform var(--transition-default);
+}
+
+.mobile-menu__wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.02)
+  );
+  z-index: -1;
 }
 
 .mobile-menu__list {
