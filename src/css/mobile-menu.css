@@ -60,9 +60,9 @@ body[data-menu-open='true'] {
   left: 0;
   height: calc(100dvh - 62px);
   z-index: 999;
-  background: rgba(5, 43, 159, 0.3);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background: rgba(5, 43, 159, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   transform: translateX(100%);
   transition:
     opacity var(--transition-default),
