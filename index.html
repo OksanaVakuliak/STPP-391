@@ -13,9 +13,9 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/STPP-391/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/STPP-391/assets/headerScroll-KtYhNpSZ.js">
+    <link rel="modulepreload" crossorigin href="/STPP-391/assets/headerScroll-BRrh_gu_.js">
     <link rel="modulepreload" crossorigin href="/STPP-391/assets/vendor-JJYSNWsT.js">
-    <link rel="stylesheet" crossorigin href="/STPP-391/assets/headerScroll-ZBXoLvun.css">
+    <link rel="stylesheet" crossorigin href="/STPP-391/assets/headerScroll-BMIM82bh.css">
     <link rel="stylesheet" crossorigin href="/STPP-391/assets/vendor-CCK7RXJZ.css">
   </head>
   <body>
@@ -149,10 +149,10 @@
   </div>
 </section>
 
-      <section class="about" id="about">
+      <section class="about" id="about" data-reveal>
   <div class="container">
     <div class="about__wrapper">
-      <picture class="about__picture">
+      <picture class="about__picture" data-reveal-item="1">
         <source
           media="(min-width: 1440px)"
           srcset="/STPP-391/assets/about-b-BAsny4GH.webp"
@@ -170,11 +170,11 @@
         />
       </picture>
       <div class="about__content">
-        <h2 class="about__title">About the Game</h2>
-        <p class="about__subtitle">
+        <h2 class="about__title" data-reveal-item="1">About the Game</h2>
+        <p class="about__subtitle" data-reveal-item="2">
           A royal match-3 expedition across the globe
         </p>
-        <p class="about__text">
+        <p class="about__text" data-reveal-item="3">
           Royal Journey follows King William on a grand quest, traveling through
           enchanting cities and iconic landmarks while solving classic match-3
           puzzles. With thousands of levels and constantly expanding
@@ -182,7 +182,7 @@
           while enjoying seamless offline play.
         </p>
       </div>
-      <picture class="about__picture">
+      <picture class="about__picture" data-reveal-item="1">
         <source
           media="(min-width: 1440px)"
           srcset="/STPP-391/assets/about-a-rjeJQqN8.webp"
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-      <section class="how-to-play" id="how-to-play">
+      <section class="how-to-play" id="how-to-play" data-reveal>
   <div class="container">
     <picture>
       <source media="(min-width: 1440px)" srcset="/STPP-391/assets/how-to-play-3kAG5auq.webp" />
@@ -217,12 +217,14 @@
       />
     </picture>
     <div class="how-to-play__intro">
-      <h2 class="how-to-play__title">How to Play</h2>
-      <p class="how-to-play__subtitle">Simple matches, worldwide adventure</p>
+      <h2 class="how-to-play__title" data-reveal-item="1">How to Play</h2>
+      <p class="how-to-play__subtitle" data-reveal-item="2">
+        Simple matches, worldwide adventure
+      </p>
     </div>
     <div class="how-to-play__slider swiper">
       <ul class="how-to-play__list swiper-wrapper">
-        <li class="how-to-play__item swiper-slide">
+        <li class="how-to-play__item swiper-slide" data-reveal-item="3">
           <article class="how-to-play__card">
             <div class="how-to-play__card-content">
               <h3 class="how-to-play__card-title">Swap & Match Tiles</h3>
@@ -240,7 +242,7 @@
             />
           </article>
         </li>
-        <li class="how-to-play__item swiper-slide">
+        <li class="how-to-play__item swiper-slide" data-reveal-item="4">
           <article class="how-to-play__card">
             <div class="how-to-play__card-content">
               <h3 class="how-to-play__card-title">Travel Between Cities</h3>
@@ -258,7 +260,7 @@
             />
           </article>
         </li>
-        <li class="how-to-play__item swiper-slide">
+        <li class="how-to-play__item swiper-slide" data-reveal-item="5">
           <article class="how-to-play__card">
             <div class="how-to-play__card-content">
               <h3 class="how-to-play__card-title">Complete Level Objectives</h3>
@@ -276,7 +278,7 @@
             />
           </article>
         </li>
-        <li class="how-to-play__item swiper-slide">
+        <li class="how-to-play__item swiper-slide" data-reveal-item="6">
           <article class="how-to-play__card">
             <div class="how-to-play__card-content">
               <h3 class="how-to-play__card-title">Collect Royal Rewards</h3>
@@ -294,7 +296,7 @@
             />
           </article>
         </li>
-        <li class="how-to-play__item swiper-slide">
+        <li class="how-to-play__item swiper-slide" data-reveal-item="7">
           <article class="how-to-play__card">
             <div class="how-to-play__card-content">
               <h3 class="how-to-play__card-title">Play Anytime, Anywhere</h3>
@@ -330,11 +332,11 @@
   </div>
 </section>
 
-      <section class="features" id="features">
+      <section class="features" id="features" data-reveal>
   <div class="container">
     <div class="features__intro">
-      <h2>Features</h2>
-      <p class="features__subtitle">
+      <h2 data-reveal-item="1">Features</h2>
+      <p class="features__subtitle" data-reveal-item="2">
         Systems built for global puzzle exploration
       </p>
     </div>
@@ -344,6 +346,7 @@
         class="features__list swiper-wrapper"
         data-reveal
         data-reveal-margin="0px 0px -95% 0px"
+        data-reveal-threshold="0"
       >
         <li class="features__item swiper-slide">
           <div class="features__flip">
@@ -459,16 +462,16 @@
   <div class="features__rail"></div>
 </section>
 
-      <section class="faq" id="faq">
+      <section class="faq" id="faq" data-reveal>
   <div class="container">
     <div class="faq__card">
       <div class="faq__intro">
-        <h2>FAQ</h2>
-        <p class="faq__subtitle">Quick answers</p>
+        <h2 data-reveal-item="1">FAQ</h2>
+        <p class="faq__subtitle" data-reveal-item="2">Quick answers</p>
       </div>
 
       <ul class="faq__list" data-faq>
-        <li class="faq__item" data-faq-item>
+        <li class="faq__item" data-faq-item data-reveal-item="3">
           <button class="faq__question" type="button" data-faq-toggle>
             <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
@@ -483,7 +486,7 @@
           </div>
         </li>
 
-        <li class="faq__item" data-faq-item>
+        <li class="faq__item" data-faq-item data-reveal-item="4">
           <button class="faq__question" type="button" data-faq-toggle>
             <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
@@ -498,7 +501,7 @@
           </div>
         </li>
 
-        <li class="faq__item" data-faq-item>
+        <li class="faq__item" data-faq-item data-reveal-item="5">
           <button class="faq__question" type="button" data-faq-toggle>
             <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
@@ -513,7 +516,7 @@
           </div>
         </li>
 
-        <li class="faq__item" data-faq-item>
+        <li class="faq__item" data-faq-item data-reveal-item="6">
           <button class="faq__question" type="button" data-faq-toggle>
             <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
@@ -528,7 +531,7 @@
           </div>
         </li>
 
-        <li class="faq__item" data-faq-item>
+        <li class="faq__item" data-faq-item data-reveal-item="7">
           <button class="faq__question" type="button" data-faq-toggle>
             <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
@@ -547,12 +550,18 @@
   </div>
 </section>
 
-      <section class="contact" id="contact">
+      <section class="contact" id="contact" data-reveal>
   <div class="container">
     <div class="contact__card">
-      <h2>Contact</h2>
-      <p class="contact__subtitle">Ready to join King William’s journey?</p>
-      <a class="contact__mail" href="mailto:info@rapidbanner.space">
+      <h2 data-reveal-item="1">Contact</h2>
+      <p class="contact__subtitle" data-reveal-item="2">
+        Ready to join King William’s journey?
+      </p>
+      <a
+        class="contact__mail"
+        href="mailto:info@rapidbanner.space"
+        data-reveal-item="3"
+      >
         <svg class="contact__icon" width="24" height="19" viewBox="0 0 30 24">
           <use class="icon" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-mail"></use>
         </svg>
