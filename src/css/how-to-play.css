@@ -114,7 +114,9 @@
 
 .how-to-play__card-image {
   width: 279px;
-  height: 208px;
+  height: auto;
+  aspect-ratio: 608 / 416;
+  object-fit: contain;
 }
 
 .how-to-play .how-to-play__pagination {
