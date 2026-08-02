@@ -1,17 +1,28 @@
 .header {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
   min-height: 62px;
   color: var(--color-white);
-  background: var(--color-footer);
   display: flex;
   align-items: center;
   transition: transform var(--transition-default);
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 43, 159, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .header[data-hidden='true'] {
@@ -42,6 +53,8 @@
 
 .menu__link {
   position: relative;
+  text-shadow: var(--color-text-shadow);
+  transition: text-shadow var(--transition-default);
 }
 
 .menu__link::after {
@@ -59,6 +72,9 @@
 }
 
 @media (hover: hover) {
+  .menu__link:hover {
+    text-shadow: var(--color-text-shadow-transition);
+  }
   .menu__link:hover::after {
     transform: scaleX(1);
   }
