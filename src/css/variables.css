@@ -8,6 +8,8 @@
   --color-text: #00050d;
   --color-white: #ffffff;
   --color-bg-shadow: rgba(1, 7, 28, 0.34);
+  --color-text-shadow: 4px 4px 12px rgba(5, 1, 24, 0.5);
+  --color-text-shadow-transition: 4px 4px 4px rgba(5, 1, 24, 0.5);
   --color-glass-warm: rgba(242, 151, 7, 0.18);
   --gradient-button-border: conic-gradient(
     #ffd07c 32%,

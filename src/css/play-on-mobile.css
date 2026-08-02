@@ -1,12 +1,12 @@
-.play-on-hero {
+.play-on-mobile {
   position: relative;
   isolation: isolate;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 11px;
-  padding: 11px 22px;
-  max-width: 320px;
+  padding: 6px 14px;
+  width: 178px;
   border-radius: var(--radius-card);
   border: 2px solid transparent;
 
@@ -19,8 +19,10 @@
   box-shadow: var(--shadow-button);
   animation: border-rotate 2.8s linear infinite;
 }
-
-.play-on-hero::before {
+.play-on-mobile {
+  display: flex;
+}
+.play-on-mobile::before {
   content: '';
   position: absolute;
   inset: 2px;
@@ -30,22 +32,22 @@
   z-index: 0;
 }
 
-.play-on-hero > * {
+.play-on-mobile > * {
   position: relative;
   z-index: 1;
 }
 
-.play-on-hero__icon {
+.play-on-mobile__icon {
   color: var(--color-white);
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
 }
 
-.play-on-hero__text {
+.play-on-mobile__text {
   font-family: var(--font-body);
   font-weight: var(--fw-bold);
-  font-size: var(--fs-button);
+  font-size: 16px;
   text-align: left;
   line-height: 100%;
   letter-spacing: var(--ls-body);
@@ -53,22 +55,21 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .play-on-hero,
-  .play-on-hero::before {
+  .play-on-mobile,
+  .play-on-mobile::before {
     animation: none;
     transition: none;
   }
 }
 
 @media (hover: hover) {
-  .play-on-hero:hover::before {
+  .play-on-mobile:hover::before {
     background-color: var(--color-accent);
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .play-on-hero {
-    width: 282px;
-    padding: 12px 44px;
+  .play-on-mobile {
+    display: none;
   }
 }

@@ -1,4 +1,4 @@
-const header = document.querySelector('.header');
+const header = document.querySelector('#header');
 
 if (header) {
   const SCROLL_DELTA = 8;

@@ -5,6 +5,7 @@ body[data-menu-open='true'] {
 
 .mobile-menu {
   position: relative;
+  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,12 +52,17 @@ body[data-menu-open='true'] {
 .mobile-menu__wrapper {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: fixed;
   width: 100%;
-  height: 100vh;
-  background: var(--color-footer);
+  display: flex;
+  flex-direction: column;
+  top: 62px;
+  left: 0;
+  height: calc(100dvh - 62px);
+  z-index: 999;
+  background: rgba(5, 43, 159, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   transform: translateX(100%);
   transition:
     opacity var(--transition-default),
@@ -65,8 +71,9 @@ body[data-menu-open='true'] {
 
 .mobile-menu__list {
   position: relative;
-  padding: 26px 38px;
+  padding: 26px 16px;
   margin: 0 auto;
+  width: 100%;
   max-width: 375px;
   display: flex;
   flex-direction: column;
@@ -77,6 +84,7 @@ body[data-menu-open='true'] {
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-h3);
   color: var(--color-white);
+  z-index: 1;
 }
 
 .mobile-menu__wrapper[data-open='true'] {
@@ -85,29 +93,44 @@ body[data-menu-open='true'] {
   transform: translateX(0);
 }
 
-.mobile-menu__wrapper::before {
+.mobile-menu__btn {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 375px;
+  margin-top: auto;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+
+.mobile-menu__btn::before {
   content: '';
   position: absolute;
-  bottom: 80px;
-  left: 24px;
-  width: 53px;
-  height: 104px;
+  bottom: 46px;
+  left: 114px;
+  width: 63px;
+  height: 125px;
   background: url('../img/illustrations/dog.webp') no-repeat center;
   background-size: contain;
 }
 
-.mobile-menu__wrapper::after {
+.mobile-menu__list::after {
   content: '';
   position: absolute;
-  bottom: 80px;
-  right: 24px;
-  width: 130px;
-  height: 287px;
+  top: 12px;
+  right: 19px;
+  width: 156px;
+  height: 342px;
   background: url('../img/illustrations/menu-king.webp') no-repeat center;
   background-size: contain;
 }
 .mobile-menu__link {
   position: relative;
+  text-shadow: var(--color-text-shadow);
+  transition: text-shadow var(--transition-default);
 }
 
 .mobile-menu__link::after {
@@ -125,6 +148,9 @@ body[data-menu-open='true'] {
 }
 
 @media (hover: hover) {
+  .mobile-menu__link:hover {
+    text-shadow: var(--color-text-shadow-transition);
+  }
   .mobile-menu__link:hover::after {
     transform: scaleX(1);
   }
@@ -133,5 +159,8 @@ body[data-menu-open='true'] {
 @media only screen and (min-width: 1440px) {
   .mobile-menu {
     display: none;
+  }
+  .mobile-menu__wrapper {
+    top: 80px;
   }
 }
