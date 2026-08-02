@@ -13,6 +13,7 @@
   align-items: center;
   transition: transform var(--transition-default);
   background: rgba(5, 43, 159, 0.3);
+  box-shadow: 0 4px 10px 0 rgba(1, 9, 30, 0.25);
 }
 
 .header::before {
