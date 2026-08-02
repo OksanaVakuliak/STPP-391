@@ -1,7 +1,12 @@
-<section class="contact" id="contact" data-reveal>
+<section
+  class="contact"
+  id="contact"
+  data-reveal
+  aria-labelledby="contact-title"
+>
   <div class="container">
     <div class="contact__card">
-      <h2 data-reveal-item="1">Contact</h2>
+      <h2 id="contact-title" data-reveal-item="1">Contact</h2>
       <p class="contact__subtitle" data-reveal-item="2">
         Ready to join King William’s journey?
       </p>
@@ -9,8 +14,15 @@
         class="contact__mail"
         href="mailto:info@rapidbanner.space"
         data-reveal-item="3"
+        aria-label="Send email to info at info@rapidbanner.space"
       >
-        <svg class="contact__icon" width="24" height="19" viewBox="0 0 30 24">
+        <svg
+          class="contact__icon"
+          width="24"
+          height="19"
+          viewBox="0 0 30 24"
+          aria-hidden="true"
+        >
           <use class="icon" href="img/sprite.svg#icon-mail"></use>
         </svg>
         <span class="contact__address">
@@ -20,6 +32,7 @@
             width="16"
             height="16"
             viewBox="0 0 20 20"
+            aria-hidden="true"
           >
             <use class="icon" href="img/sprite.svg#icon-arrow"></use>
           </svg>
