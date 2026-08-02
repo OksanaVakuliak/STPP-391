@@ -14,6 +14,7 @@
   transition: transform var(--transition-default);
   background: rgba(5, 43, 159, 0.6);
   box-shadow: 0 4px 10px 0 rgba(1, 9, 30, 0.25);
+  border-bottom: 0.5px solid var(--color-white);
 }
 
 .header::before {
