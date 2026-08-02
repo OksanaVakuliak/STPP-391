@@ -53,8 +53,6 @@ body[data-menu-open='true'] {
   visibility: hidden;
   opacity: 0;
   position: fixed;
-  /* top: 62px;
-  left: 0; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -103,7 +101,6 @@ body[data-menu-open='true'] {
   align-items: center;
   width: 100%;
   max-width: 375px;
-  /*  height: 60px; */
   margin-top: auto;
   margin-bottom: 16px;
   z-index: 1;
