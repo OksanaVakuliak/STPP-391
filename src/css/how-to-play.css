@@ -150,6 +150,7 @@
 @media only screen and (min-width: 1440px) {
   .how-to-play {
     min-height: 1242px;
+    overflow: hidden;
   }
   .how-to-play__title {
     margin-bottom: 20px;
@@ -185,5 +186,101 @@
   }
   .how-to-play .how-to-play__pagination {
     display: none;
+  }
+
+  .how-to-play .how-to-play__slider,
+  .how-to-play .how-to-play__list {
+    z-index: auto;
+    transform: none;
+    overflow: visible;
+  }
+
+  .how-to-play__item:nth-child(1) {
+    --fly-order: 4;
+    --fly-duration: 1.42s;
+    --fly-path: path(
+      'M 778 1142 C 778 952 771 902.9 771 792.9 C 653.5 822.8 524.3 820.9 408.8 787.4 C 293.3 753.9 199.9 691.4 147 612.1 C 94.1 532.8 85.5 442.5 123 359 C 160.5 275.6 241.3 204.9 349.5 161.1 C 457.7 117.2 585.4 103.4 707.5 122.2 C 829.6 141 937.2 191.2 1009.1 262.8 C 1081 334.4 1111.9 422.2 1095.9 509 C 1079.8 595.8 1017.8 675.2 922.3 731.6 C 826.7 788 704.4 817.3 579.5 813.7 C 454.6 810.1 336.1 773.9 247.4 712.2 C 158.8 650.5 106.4 567.8 100.5 480.4 C 94.7 392.9 135.9 307.2 215.9 239.9 C 286.3 180.8 249.6 177.6 192 226'
+    );
+  }
+
+  .how-to-play__item:nth-child(2) {
+    --fly-order: 3;
+    --fly-duration: 1.56s;
+    --fly-path: path(
+      'M 370 1142 C 370 952 363 902.9 363 792.9 C 243.9 823.3 112.7 820.8 -4 786 C -120.6 751.2 -214.1 686.7 -265.3 605.5 C -316.6 524.3 -321.9 432.5 -280.1 348.7 C -238.3 264.9 -152.6 195.3 -40.4 154.1 C 71.9 112.8 202.4 103 324.6 126.5 C 446.9 150.1 551.8 205.3 618.1 280.9 C 684.5 356.6 707.3 447 681.9 534 C 656.5 621 584.9 698 481.5 749.3 C 378.2 800.7 250.7 822.7 125.1 810.9 C -0.6 799 -115.1 754.1 -195.3 685.4 C -275.5 616.6 -315.4 529.1 -306.9 440.5 C -298.4 352 -242.1 269 -149.5 208.3 C -56.9 147.7 65.2 114 192 114 C 302 114 282 226 192 226'
+    );
+  }
+
+  .how-to-play__item:nth-child(3) {
+    --fly-order: 2;
+    --fly-duration: 1.7s;
+    --fly-path: path(
+      'M -38 1142 C -38 952 -45 902.9 -45 792.9 C -165.6 823.6 -298.4 820.7 -416.1 784.8 C -533.7 748.8 -627 682.6 -676.8 599.8 C -726.6 517 -729 424 -683.5 340 C -638.1 256 -548.2 187.4 -432.5 148.5 C -316.8 109.6 -184.2 103.3 -62.1 131 C 60 158.6 162.2 218.1 223.5 297.1 C 284.7 376 300.2 468.4 266.7 555.2 C 233.3 641.9 153.5 716.3 43.9 763 C -65.7 809.7 -196.8 825.1 -322.2 806 C -447.6 786.9 -557.8 734.8 -629.8 660.5 C -701.8 586.1 -730.3 495.2 -709.2 406.6 C -688.2 318 -619.3 238.4 -516.7 184.4 C -414.2 130.4 -285.9 106 -158.5 116.3 C -31 126.7 86 170.9 168.1 239.9 C 238.5 299.1 249.6 274.4 192 226'
+    );
+  }
+
+  .how-to-play__item:nth-child(4) {
+    --fly-order: 0;
+    --fly-duration: 1.15s;
+    --fly-path: path(
+      'M 574 666 C 574 476 567 426.9 567 316.9 C 453.5 345.8 328.8 345 216 314.5 C 103.3 284.1 10.1 226.1 -46.3 151.3 C -102.6 76.5 -118.4 -10.1 -90.6 -92.5 C -62.8 -174.8 6.6 -247.3 104.8 -296.5 C 203.1 -345.8 323.5 -368.5 443.8 -360.4 C 564.1 -352.3 676.1 -314 759.2 -252.6 C 842.2 -191.1 890.7 -110.7 895.6 -26.2 C 900.5 58.3 861.5 141.2 785.8 207.2 C 710.2 273.1 602.9 317.7 484 332.5 C 365 347.4 242.4 331.6 138.8 288.1 C 44.4 248.5 114.8 193.6 192 226'
+    );
+  }
+
+  .how-to-play__item:nth-child(5) {
+    --fly-order: 1;
+    --fly-duration: 0.97s;
+    --fly-path: path(
+      'M 166 666 C 166 476 159 426.9 159 316.9 C 38.3 347.6 -94.7 344.7 -212.4 308.7 C -330.1 272.6 -423.5 206.2 -473.1 123.3 C -522.8 40.4 -524.9 -52.8 -479.1 -136.8 C -433.3 -220.8 -343.1 -289.3 -227.1 -328 C -111.1 -366.6 21.7 -372.6 143.7 -344.6 C 265.8 -316.6 367.8 -256.8 428.6 -177.5 C 489.3 -98.3 504.2 -5.7 470 81 C 435.9 167.7 355.4 241.9 245.2 288.1 C 150.9 327.7 114.8 258.4 192 226'
+    );
+  }
+
+  .how-to-play[data-reveal] .how-to-play__item {
+    position: relative;
+    z-index: 0;
+    opacity: 1;
+    translate: none;
+    offset-anchor: 50% 50%;
+    offset-rotate: 0deg;
+    offset-path: var(--fly-path);
+    offset-distance: 0%;
+  }
+
+  .how-to-play[data-reveal='visible'] .how-to-play__item {
+    z-index: 2;
+    offset-path: none;
+    animation: how-to-play-ride var(--fly-duration) var(--ease-fly)
+      calc(var(--fly-order) * var(--delay-fly)) backwards;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (prefers-reduced-motion: reduce) {
+  .how-to-play[data-reveal] .how-to-play__item,
+  .how-to-play[data-reveal='visible'] .how-to-play__item {
+    z-index: 2;
+    offset-path: none;
+    offset-distance: 0;
+    animation: none;
+  }
+}
+
+@keyframes how-to-play-ride {
+  from {
+    z-index: 0;
+    offset-path: var(--fly-path);
+    offset-distance: 0%;
+  }
+  12% {
+    z-index: 0;
+    offset-path: var(--fly-path);
+  }
+  13% {
+    z-index: 2;
+    offset-path: var(--fly-path);
+  }
+  to {
+    z-index: 2;
+    offset-path: var(--fly-path);
+    offset-distance: 100%;
   }
 }

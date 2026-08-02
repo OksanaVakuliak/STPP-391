@@ -68,6 +68,9 @@
   --delay-reveal: 0.12s;
   --ease-reveal: cubic-bezier(0.22, 0.61, 0.36, 1);
   --reveal-shift: 24px;
+
+  --delay-fly: 0.15s;
+  --ease-fly: cubic-bezier(0.35, 0.05, 0.25, 1);
 }
 
 @media only screen and (min-width: 1440px) {
