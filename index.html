@@ -46,9 +46,9 @@
   <body>
     <header class="header" id="header" data-hidden="true">
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary navigation">
       <div class="nav__logo">
-        <a href="#hero"><img src="/STPP-391/assets/logo-CmOxXw_e.webp" alt="logo" /></a>
+        <a href="#hero"><img src="/STPP-391/assets/logo-CmOxXw_e.webp" alt="" /></a>
       </div>
       <button
   type="button"
@@ -82,12 +82,16 @@
 
 <div
   class="mobile-menu__wrapper"
+  id="mobile-menu-panel"
   data-mobile-menu-list-wrapper
   data-open="false"
+  aria-hidden="true"
 >
   <ul class="mobile-menu__list">
     <li class="mobile-menu__item">
-      <a href="#hero" class="mobile-menu__link">Home</a>
+      <a href="#hero" class="mobile-menu__link" aria-label="Go to homepage"
+        >Home</a
+      >
     </li>
     <li class="mobile-menu__item">
       <a href="#about" class="mobile-menu__link">About </a>
@@ -109,8 +113,15 @@
   href="https://play.google.com/store/apps/details?id=com.koofei.matchmansion&hl=en&gl=us"
   target="_blank"
   rel="noopener noreferrer"
+  aria-label="Play on Google Play in a new tab"
 >
-  <svg class="play-on-mobile__icon" width="30" height="30" viewBox="0 0 30 30">
+  <svg
+    class="play-on-mobile__icon"
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    aria-hidden="true"
+  >
     <use href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-google-play"></use>
   </svg>
   <p class="play-on-mobile__text">Play on Google Play</p>
@@ -141,8 +152,15 @@
   href="https://play.google.com/store/apps/details?id=com.koofei.matchmansion&hl=en&gl=us"
   target="_blank"
   rel="noopener noreferrer"
+  aria-label="Play on Google Play in a new tab"
 >
-  <svg class="play-on__icon" width="30" height="30" viewBox="0 0 30 30">
+  <svg
+    class="play-on__icon"
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    aria-hidden="true"
+  >
     <use href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-google-play"></use>
   </svg>
   <p class="play-on__text">Play on Google Play</p>
@@ -153,19 +171,26 @@
 </header>
 
     <main>
-      <section class="hero" id="hero">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
   <div class="container hero__container">
     <p class="hero__descr">
       Join King William's royal expedition through thousands of match-3 levels
     </p>
-    <h1 class="hero__title">Match Your Way Across the World</h1>
+    <h1 class="hero__title" id="hero-title">Match Your Way Across the World</h1>
     <a
   class="play-on-hero"
   href="https://play.google.com/store/apps/details?id=com.koofei.matchmansion&hl=en&gl=us"
   target="_blank"
   rel="noopener noreferrer"
+  aria-label="Play on Google Play in a new tab"
 >
-  <svg class="play-on-hero__icon" width="40" height="40" viewBox="0 0 40 40">
+  <svg
+    class="play-on-hero__icon"
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    aria-hidden="true"
+  >
     <use href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-google-play"></use>
   </svg>
   <p class="play-on-hero__text">Play on Google Play</p>
@@ -174,7 +199,7 @@
   </div>
 </section>
 
-      <section class="about" id="about" data-reveal>
+      <section class="about" id="about" data-reveal aria-labelledby="about-title">
   <div class="container">
     <div class="about__wrapper">
       <picture class="about__picture" data-reveal-item="1">
@@ -195,7 +220,9 @@
         />
       </picture>
       <div class="about__content">
-        <h2 class="about__title" data-reveal-item="1">About the Game</h2>
+        <h2 class="about__title" id="about-title" data-reveal-item="1">
+          About the Game
+        </h2>
         <p class="about__subtitle" data-reveal-item="2">
           A royal match-3 expedition across the globe
         </p>
@@ -228,7 +255,12 @@
   </div>
 </section>
 
-      <section class="how-to-play" id="how-to-play" data-reveal>
+      <section
+  class="how-to-play"
+  id="how-to-play"
+  data-reveal
+  aria-labelledby="how-to-play-title"
+>
   <div class="container">
     <picture>
       <source media="(min-width: 1440px)" srcset="/STPP-391/assets/how-to-play-3kAG5auq.webp" />
@@ -242,12 +274,22 @@
       />
     </picture>
     <div class="how-to-play__intro">
-      <h2 class="how-to-play__title" data-reveal-item="1">How to Play</h2>
+      <h2
+        class="how-to-play__title"
+        id="how-to-play-title"
+        data-reveal-item="1"
+      >
+        How to Play
+      </h2>
       <p class="how-to-play__subtitle" data-reveal-item="2">
         Simple matches, worldwide adventure
       </p>
     </div>
-    <div class="how-to-play__slider swiper">
+    <div
+      class="how-to-play__slider swiper"
+      role="region"
+      aria-label="How to play carousel"
+    >
       <ul class="how-to-play__list swiper-wrapper">
         <li class="how-to-play__item swiper-slide" data-reveal-item="3">
           <article class="how-to-play__card">
@@ -357,10 +399,15 @@
   </div>
 </section>
 
-      <section class="features" id="features" data-reveal>
+      <section
+  class="features"
+  id="features"
+  data-reveal
+  aria-labelledby="features-title"
+>
   <div class="container">
     <div class="features__intro">
-      <h2 data-reveal-item="1">Features</h2>
+      <h2 id="features-title" data-reveal-item="1">Features</h2>
       <p class="features__subtitle" data-reveal-item="2">
         Systems built for global puzzle exploration
       </p>
@@ -487,24 +534,47 @@
   <div class="features__rail"></div>
 </section>
 
-      <section class="faq" id="faq" data-reveal>
+      <section class="faq" id="faq" data-reveal aria-labelledby="faq-title">
   <div class="container">
     <div class="faq__card">
       <div class="faq__intro">
-        <h2 data-reveal-item="1">FAQ</h2>
+        <h2 id="faq-title" data-reveal-item="1">FAQ</h2>
         <p class="faq__subtitle" data-reveal-item="2">Quick answers</p>
       </div>
 
       <ul class="faq__list" data-faq>
         <li class="faq__item" data-faq-item data-reveal-item="3">
-          <button class="faq__question" type="button" data-faq-toggle>
-            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
+          <button
+            class="faq__question"
+            type="button"
+            data-faq-toggle
+            id="faq-button-1"
+            aria-expanded="false"
+            aria-controls="faq-answer-1"
+          >
+            <svg
+              class="faq__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
-              <use class="faq__bar faq__bar--turn" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
+              <use
+                class="faq__bar faq__bar--turn"
+                href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"
+              ></use>
             </svg>
             Can I play Royal Journey offline?
           </button>
-          <div class="faq__answer">
+          <div
+            class="faq__answer"
+            id="faq-answer-1"
+            data-faq-panel
+            role="region"
+            aria-labelledby="faq-button-1"
+            hidden
+          >
             <div class="faq__answer-inner">
               <p>Yes, the game supports offline play.</p>
             </div>
@@ -512,14 +582,37 @@
         </li>
 
         <li class="faq__item" data-faq-item data-reveal-item="4">
-          <button class="faq__question" type="button" data-faq-toggle>
-            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
+          <button
+            class="faq__question"
+            type="button"
+            data-faq-toggle
+            id="faq-button-2"
+            aria-expanded="false"
+            aria-controls="faq-answer-2"
+          >
+            <svg
+              class="faq__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
-              <use class="faq__bar faq__bar--turn" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
+              <use
+                class="faq__bar faq__bar--turn"
+                href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"
+              ></use>
             </svg>
             How many levels does the game have?
           </button>
-          <div class="faq__answer">
+          <div
+            class="faq__answer"
+            id="faq-answer-2"
+            data-faq-panel
+            role="region"
+            aria-labelledby="faq-button-2"
+            hidden
+          >
             <div class="faq__answer-inner">
               <p>Thousands of levels, with new ones added regularly.</p>
             </div>
@@ -527,14 +620,37 @@
         </li>
 
         <li class="faq__item" data-faq-item data-reveal-item="5">
-          <button class="faq__question" type="button" data-faq-toggle>
-            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
+          <button
+            class="faq__question"
+            type="button"
+            data-faq-toggle
+            id="faq-button-3"
+            aria-expanded="false"
+            aria-controls="faq-answer-3"
+          >
+            <svg
+              class="faq__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
-              <use class="faq__bar faq__bar--turn" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
+              <use
+                class="faq__bar faq__bar--turn"
+                href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"
+              ></use>
             </svg>
             Is there a story behind each city?
           </button>
-          <div class="faq__answer">
+          <div
+            class="faq__answer"
+            id="faq-answer-3"
+            data-faq-panel
+            role="region"
+            aria-labelledby="faq-button-3"
+            hidden
+          >
             <div class="faq__answer-inner">
               <p>Yes, each destination reveals its own hidden story.</p>
             </div>
@@ -542,14 +658,37 @@
         </li>
 
         <li class="faq__item" data-faq-item data-reveal-item="6">
-          <button class="faq__question" type="button" data-faq-toggle>
-            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
+          <button
+            class="faq__question"
+            type="button"
+            data-faq-toggle
+            id="faq-button-4"
+            aria-expanded="false"
+            aria-controls="faq-answer-4"
+          >
+            <svg
+              class="faq__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
-              <use class="faq__bar faq__bar--turn" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
+              <use
+                class="faq__bar faq__bar--turn"
+                href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"
+              ></use>
             </svg>
             Is there a way to compete with other players?
           </button>
-          <div class="faq__answer">
+          <div
+            class="faq__answer"
+            id="faq-answer-4"
+            data-faq-panel
+            role="region"
+            aria-labelledby="faq-button-4"
+            hidden
+          >
             <div class="faq__answer-inner">
               <p>Yes, a global leaderboard tracks player progress.</p>
             </div>
@@ -557,14 +696,37 @@
         </li>
 
         <li class="faq__item" data-faq-item data-reveal-item="7">
-          <button class="faq__question" type="button" data-faq-toggle>
-            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24">
+          <button
+            class="faq__question"
+            type="button"
+            data-faq-toggle
+            id="faq-button-5"
+            aria-expanded="false"
+            aria-controls="faq-answer-5"
+          >
+            <svg
+              class="faq__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <use class="faq__bar" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
-              <use class="faq__bar faq__bar--turn" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"></use>
+              <use
+                class="faq__bar faq__bar--turn"
+                href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-minus"
+              ></use>
             </svg>
             Is the game free to play?
           </button>
-          <div class="faq__answer">
+          <div
+            class="faq__answer"
+            id="faq-answer-5"
+            data-faq-panel
+            role="region"
+            aria-labelledby="faq-button-5"
+            hidden
+          >
             <div class="faq__answer-inner">
               <p>Yes, with optional in-game purchases available.</p>
             </div>
@@ -575,10 +737,15 @@
   </div>
 </section>
 
-      <section class="contact" id="contact" data-reveal>
+      <section
+  class="contact"
+  id="contact"
+  data-reveal
+  aria-labelledby="contact-title"
+>
   <div class="container">
     <div class="contact__card">
-      <h2 data-reveal-item="1">Contact</h2>
+      <h2 id="contact-title" data-reveal-item="1">Contact</h2>
       <p class="contact__subtitle" data-reveal-item="2">
         Ready to join King William’s journey?
       </p>
@@ -586,8 +753,15 @@
         class="contact__mail"
         href="mailto:info@rapidbanner.space"
         data-reveal-item="3"
+        aria-label="Send email to info at info@rapidbanner.space"
       >
-        <svg class="contact__icon" width="24" height="19" viewBox="0 0 30 24">
+        <svg
+          class="contact__icon"
+          width="24"
+          height="19"
+          viewBox="0 0 30 24"
+          aria-hidden="true"
+        >
           <use class="icon" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-mail"></use>
         </svg>
         <span class="contact__address">
@@ -597,6 +771,7 @@
             width="16"
             height="16"
             viewBox="0 0 20 20"
+            aria-hidden="true"
           >
             <use class="icon" href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-arrow"></use>
           </svg>

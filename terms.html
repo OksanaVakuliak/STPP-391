@@ -45,17 +45,26 @@
   <body>
     <header class="header" data-hidden="true">
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" aria-label="Privacy and terms navigation">
       <div class="nav__logo">
-        <a href="./index.html"><img src="/STPP-391/assets/logo-CmOxXw_e.webp" alt="logo" /></a>
+        <a href="./index.html" aria-label="Go to homepage"
+          ><img src="/STPP-391/assets/logo-CmOxXw_e.webp" alt="logo"
+        /></a>
       </div>
       <a
   class="play-on"
   href="https://play.google.com/store/apps/details?id=com.koofei.matchmansion&hl=en&gl=us"
   target="_blank"
   rel="noopener noreferrer"
+  aria-label="Play on Google Play in a new tab"
 >
-  <svg class="play-on__icon" width="30" height="30" viewBox="0 0 30 30">
+  <svg
+    class="play-on__icon"
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    aria-hidden="true"
+  >
     <use href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-google-play"></use>
   </svg>
   <p class="play-on__text">Play on Google Play</p>
@@ -66,17 +75,23 @@
 </header>
 
 
-    <main class="legal">
+    <main class="legal" aria-labelledby="terms-title">
       <div class="container">
         <div class="legal__inner">
-          <a class="back-link" href="./index.html">
-  <svg class="back-link__icon" width="20" height="20" viewBox="0 0 20 20">
+          <a class="back-link" href="./index.html" aria-label="Back to home page">
+  <svg
+    class="back-link__icon"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    aria-hidden="true"
+  >
     <use href="/STPP-391/assets/sprite-CmlVCdTj.svg#icon-home"></use>
   </svg>
   Back to Home
 </a>
 
-          <h1 class="legal__heading">Terms of Service</h1>
+          <h1 class="legal__heading" id="terms-title">Terms of Service</h1>
           <div class="legal__content">
             <h2 class="legal__title">ACCEPTANCE OF TERMS OF SERVICE</h2>
             <p>
