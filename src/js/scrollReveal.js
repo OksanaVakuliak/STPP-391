@@ -1,20 +1,23 @@
-const DEFAULT_MARGIN = '0px 0px -20% 0px';
+const DEFAULT_MARGIN = '0px';
+const DEFAULT_THRESHOLD = 0.2;
 
 const groups = new Map();
 
 document.querySelectorAll('[data-reveal]').forEach(target => {
-  const margin = target.dataset.revealMargin || DEFAULT_MARGIN;
-  const group = groups.get(margin);
+  const rootMargin = target.dataset.revealMargin || DEFAULT_MARGIN;
+  const threshold = Number(target.dataset.revealThreshold ?? DEFAULT_THRESHOLD);
+  const key = `${rootMargin}|${threshold}`;
+  const group = groups.get(key);
 
   if (group) {
-    group.push(target);
+    group.targets.push(target);
     return;
   }
 
-  groups.set(margin, [target]);
+  groups.set(key, { rootMargin, threshold, targets: [target] });
 });
 
-groups.forEach((targets, rootMargin) => {
+groups.forEach(({ rootMargin, threshold, targets }) => {
   const observer = new IntersectionObserver(
     (entries, instance) => {
       entries.forEach(entry => {
@@ -24,7 +27,7 @@ groups.forEach((targets, rootMargin) => {
         instance.unobserve(entry.target);
       });
     },
-    { rootMargin }
+    { rootMargin, threshold }
   );
 
   targets.forEach(target => observer.observe(target));
