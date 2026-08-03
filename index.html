@@ -89,19 +89,25 @@
 >
   <ul class="mobile-menu__list">
     <li class="mobile-menu__item">
-      <a href="#hero" class="mobile-menu__link">Home</a>
+      <a href="#hero" class="mobile-menu__link" data-mobile-menu-link>Home</a>
     </li>
     <li class="mobile-menu__item">
-      <a href="#about" class="mobile-menu__link">About </a>
+      <a href="#about" class="mobile-menu__link" data-mobile-menu-link
+        >About
+      </a>
     </li>
     <li class="mobile-menu__item">
-      <a href="#how-to-play" class="mobile-menu__link">How to Play</a>
+      <a href="#how-to-play" class="mobile-menu__link" data-mobile-menu-link
+        >How to Play</a
+      >
     </li>
     <li class="mobile-menu__item">
-      <a href="#features" class="mobile-menu__link">Features</a>
+      <a href="#features" class="mobile-menu__link" data-mobile-menu-link
+        >Features</a
+      >
     </li>
     <li class="mobile-menu__item">
-      <a href="#faq" class="mobile-menu__link">FAQ</a>
+      <a href="#faq" class="mobile-menu__link" data-mobile-menu-link>FAQ</a>
     </li>
   </ul>
 
@@ -283,6 +289,7 @@
     </div>
     <div
       class="how-to-play__slider swiper"
+      data-slider="how-to-play"
       role="region"
       aria-label="How to play carousel"
     >
@@ -379,7 +386,10 @@
         </li>
       </ul>
     </div>
-    <div class="how-to-play__pagination swiper-pagination"></div>
+    <div
+      class="how-to-play__pagination swiper-pagination"
+      data-slider-pagination="how-to-play"
+    ></div>
 
     <picture>
       <source media="(min-width: 1440px)" srcset="/STPP-391/assets/arc-DhppWcXJ.webp" />
@@ -411,6 +421,7 @@
 
     <div
       class="features__slider swiper"
+      data-slider="features"
       role="region"
       aria-label="Features carousel"
     >
@@ -529,7 +540,10 @@
         </li>
       </ul>
     </div>
-    <div class="features__pagination swiper-pagination"></div>
+    <div
+      class="features__pagination swiper-pagination"
+      data-slider-pagination="features"
+    ></div>
   </div>
   <div class="features__rail"></div>
 </section>
