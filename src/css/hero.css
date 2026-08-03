@@ -21,16 +21,16 @@
   font-weight: var(--fw-medium);
   font-size: var(--fs-h3);
   margin-bottom: 8px;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow-descr);
 }
 
 .hero__title {
   max-width: 267px;
   font-weight: var(--fw-bold);
   font-size: var(--fs-h1);
-  -webkit-text-stroke: 8px var(--color-footer);
+  -webkit-text-stroke: 10px var(--color-footer);
   paint-order: stroke fill;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow-title);
   margin-bottom: 98px;
 }
 

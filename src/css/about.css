@@ -31,7 +31,7 @@
   left: 0;
   width: 258px;
   height: 559px;
-  border: var(--border-card) solid var(--color-border);
+  border: var(--border-card-lg) solid var(--color-border);
   border-radius: var(--radius-card);
   z-index: 2;
 }

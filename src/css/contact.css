@@ -47,7 +47,7 @@
   font-size: var(--fs-h3);
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-h3);
-  -webkit-text-stroke: 6px var(--color-accent);
+  -webkit-text-stroke: 8px var(--color-accent);
   paint-order: stroke fill;
 }
 
