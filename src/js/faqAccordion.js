@@ -1,22 +1,6 @@
 const faqList = document.querySelector('[data-faq]');
 
 if (faqList) {
-  const items = faqList.querySelectorAll('[data-faq-item]');
-
-  items.forEach(item => {
-    const toggle = item.querySelector('[data-faq-toggle]');
-    const panel = item.querySelector('[data-faq-panel]');
-
-    if (!toggle || !panel) {
-      return;
-    }
-
-    toggle.setAttribute('aria-expanded', 'false');
-    panel.hidden = true;
-    panel.setAttribute('role', 'region');
-    panel.setAttribute('aria-labelledby', toggle.id);
-  });
-
   faqList.addEventListener('click', event => {
     const toggle = event.target.closest('[data-faq-toggle]');
 

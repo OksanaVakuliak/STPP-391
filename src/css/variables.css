@@ -11,15 +11,8 @@
   --color-text-shadow: 4px 4px 12px rgba(5, 1, 24, 0.5);
   --color-text-shadow-transition: 4px 4px 4px rgba(5, 1, 24, 0.5);
   --color-glass-warm: rgba(242, 151, 7, 0.18);
-  --gradient-button-border: conic-gradient(
-    #ffd07c 32%,
-    #f7a81c 47%,
-    #ffffff 52%,
-    #f29707 82%
-  );
   --gradient-play-on-border-stops:
     #ffd07c 0deg, #f7a81c 90deg, #ffffff 180deg, #f29707 270deg, #ffd07c 360deg;
-  --gradient-decor: radial-gradient(#8aaae6 37%, #1e46c0 100%);
 
   --font-display: 'Fredoka', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -51,7 +44,8 @@
 
   --shadow-button: 8px 8px 8px 2px rgba(7, 5, 83, 0.25);
   --shadow-faq: 4px 4px 12px rgba(0, 0, 0, 0.25);
-  --text-shadow: 0 4px 10px rgba(2, 24, 66, 0.35);
+  --text-shadow-title: 4px 4px 10px rgba(2, 24, 66, 0.37);
+  --text-shadow-descr: 0 4px 4px rgba(0, 0, 0, 0.25);
   --container-padding: 16px;
   --container-max: 375px;
 
