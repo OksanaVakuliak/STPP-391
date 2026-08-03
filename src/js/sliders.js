@@ -14,13 +14,13 @@ const shiftDots = swiper => {
   swiper.pagination.el.dataset.step = step;
 };
 
-const createSlider = (selector, paginationSelector) =>
-  new Swiper(selector, {
+const createSlider = name =>
+  new Swiper(`[data-slider="${name}"]`, {
     modules: [Pagination],
     slidesPerView: 1,
     spaceBetween: 16,
     pagination: {
-      el: paginationSelector,
+      el: `[data-slider-pagination="${name}"]`,
       clickable: true,
     },
     on: {
@@ -32,13 +32,10 @@ const createSlider = (selector, paginationSelector) =>
 const syncSliders = () => {
   if (mobile.matches) {
     if (!features) {
-      features = createSlider('.features__slider', '.features__pagination');
+      features = createSlider('features');
     }
     if (!howToPlay) {
-      howToPlay = createSlider(
-        '.how-to-play__slider',
-        '.how-to-play__pagination'
-      );
+      howToPlay = createSlider('how-to-play');
     }
     return;
   }

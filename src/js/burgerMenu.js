@@ -2,7 +2,7 @@ const mobileMenuBtn = document.querySelector('[data-mobile-menu]');
 const menuWrapper = document.querySelector('[data-mobile-menu-list-wrapper]');
 
 if (mobileMenuBtn && menuWrapper) {
-  const menuLinks = menuWrapper.querySelectorAll('.mobile-menu__link');
+  const menuLinks = menuWrapper.querySelectorAll('[data-mobile-menu-link]');
 
   const setMenuState = isOpen => {
     const value = isOpen ? 'true' : 'false';
